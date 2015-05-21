@@ -2,7 +2,7 @@
 
 This is a small utility for Ruby on Rails developers using Docker in their development environment.
 It creates environment variables similar to those created by docker inside a container linked to other containers.
-It's purpose is to allow you to run your dockerized Rails application outside of docker container,
+It's purpose is to allow you to run your dockerized Rails application outside of a docker container,
 while still allowing to connect to other services that are running inside docker containers.
 
 ## Usage example
