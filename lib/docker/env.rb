@@ -7,8 +7,11 @@ module Docker
     def self.set_env
 
       Docker::Container.all.find_all do |c|
+        puts c.to_json
         c.info['Names'].map { |n| n.split('/').last.upcase }.uniq.each do |service_name|
           c.info['Ports'].each do |port_info|
+            puts port_info.to_json
+            puts service_name
             if public_port = port_info['PublicPort']
               private_port = port_info['PrivatePort']
               port_type = port_info['Type']
